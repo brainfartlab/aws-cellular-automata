@@ -20,7 +20,7 @@ export class PipelineStack extends Stack {
     const connectionArn = Arn.format({
       arnFormat: ArnFormat.SLASH_RESOURCE_NAME,
       resource: 'connection',
-      resourceName: props.connectionId,
+      resourceName: '94afd244-d1c7-48d8-9162-41276d79cc2a',
       service: 'codestar-connections',
     }, this);
 
