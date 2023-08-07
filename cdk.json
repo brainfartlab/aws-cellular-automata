@@ -59,7 +59,7 @@
     "dev": {
       "account": "310831841795",
       "region": "eu-west-1",
-      "connectionId": "94afd244-d1c7-48d8-9162-41276d79cc2a",
+      "connectionId": "f8eceddd-62d2-4af2-91bb-c2ea0555ec36",
       "ssoRole": "AWSReservedSSO_AWSPowerUserAccess_bac6d28ef4facbb1"
      },
     "prd": {
