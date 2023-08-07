@@ -16,6 +16,7 @@ export class PipelineStage extends Stage {
     new VaultCellularAutomataStack(this, 'CellularAutomataVault', {
       connectionId: config.connectionId,
       environment: props.environment,
+      ssoRole: config.ssoRole,
     });
   }
 }

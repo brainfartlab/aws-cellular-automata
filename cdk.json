@@ -53,12 +53,14 @@
     "tst": {
       "account": "811733000668",
       "region": "eu-west-1",
-      "connectionId": "aefe569c-0ae1-460d-8080-829343638b59"
+      "connectionId": "aefe569c-0ae1-460d-8080-829343638b59",
+      "ssoRole": "AWSReservedSSO_AWSPowerUserAccess_f0b3e7fb97c0007e"
      },
     "dev": {
       "account": "310831841795",
       "region": "eu-west-1",
-      "connectionId": "94afd244-d1c7-48d8-9162-41276d79cc2a"
+      "connectionId": "94afd244-d1c7-48d8-9162-41276d79cc2a",
+      "ssoRole": "AWSReservedSSO_AWSPowerUserAccess_bac6d28ef4facbb1"
      },
     "prd": {
       "account": "710339506557",

@@ -10,6 +10,7 @@ import { ElmRustPipelineProduct } from './products/elm-rust-pipeline';
 interface VaultCellularAutomataStackProps extends cdk.StackProps {
   connectionId: string;
   environment: 'tst' | 'dev' | 'prd';
+  ssoRole: string;
 }
 
 export class VaultCellularAutomataStack extends cdk.Stack {
@@ -26,7 +27,7 @@ export class VaultCellularAutomataStack extends cdk.Stack {
       messageLanguage: sc.MessageLanguage.EN,
     });
 
-    const powerUserRole = iam.Role.fromRoleName(this, 'PowerUserRole', 'AWSReservedSSO_AWSPowerUserAccess_f0b3e7fb97c0007e');
+    const powerUserRole = iam.Role.fromRoleName(this, 'PowerUserRole', props.ssoRole);
     portfolio.giveAccessToRole(powerUserRole);
 
     const elmRustPipelineProduct = new sc.CloudFormationProduct(this, 'ElmRustPipelineProduct', {
