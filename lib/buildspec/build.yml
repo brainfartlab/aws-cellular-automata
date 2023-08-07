@@ -1,0 +1,29 @@
+---
+version: 0.2
+env:
+  shell: bash
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+    commands:
+      - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+      - source "$HOME/.cargo/env"
+      - curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+      - curl -L -o elm.gz https://github.com/elm/compiler/releases/download/0.19.1/binary-for-linux-64-bit.gz
+      - gunzip elm.gz
+      - chmod +x elm
+      - mv elm /usr/local/bin/
+
+  build:
+    commands:
+      - wasm-pack build --release
+      - cd www
+      - npm install
+      - npm run build
+
+artifacts:
+  files:
+    - www/dist/*
+  discard-paths: yes
