@@ -14,4 +14,5 @@ new VaultCellularAutomataStack(app, 'VaultCellularAutomataStack', {
   },
   connectionId: config.connectionId,
   environment: env,
+  ssoRole: config.ssoRole,
 });
